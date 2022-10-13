@@ -6,7 +6,7 @@ This Website is based on Django and React. It is responsive as well. <br>
 Firstly clone the project using command: 
 
 ```
-git clone https://github.com/PrernaPandeykp/todoApp-react-django.git
+git clone https://github.com/PrernaPandeykp/django-task.git
 ```
 
 For running:
