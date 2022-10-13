@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    /* p{
+        font-size: large;
+    }
+    button{
+        font-size: large;
+    } */
+    /* bisque
+    #a34e78; */
+</style>
+<body>
+
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1>The Website about Asgard</h1>
+    </div>
+</div>
+
+<div class="container text-center ">
+    <div class="row">
+        <div class="col-sm-3" style="padding:20px;">
+            <button style="padding:20px;width:180px;margin-left:20px;" class="btn btn-info btn-lg" type="button"  onclick="onclickHandler('Geography')">Geography</button>
+            <div id="Geography" class="hide" style="background-color:#c4e9f9; margin-top: 30px;" >
+                <blockquote class="blockquote" style="border-left:  solid #0d4056;">
+                <p class="pb-2">
+                    {{data.Geography}}
+                </p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="col-sm-3" style="padding:20px">
+            <button style="padding:20px;margin-left:20px;width:180px" class="btn btn-info btn-lg" type="button" onclick="onclickHandler('History')">History</button>
+            <!-- <div id="History" class="hide" style="margin-left:20px;max-width:300px ;padding:20px;background-color:darkcyan;border-radius: 10%;margin-top: 20px">
+                {{data.History}}
+            </div> -->
+            <div id="History" class="hide" style="background-color:#c4e9f9; margin-top: 30px;" >
+                <blockquote class="blockquote" style="border-left:  solid #0d4056;">
+                <p class="pb-2">
+                    {{data.History}}
+
+                </p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="col-sm-3" style="padding:20px">
+            <button style="padding:20px;margin-left:20px;width:180px" class="btn btn-info btn-lg" type="button" onclick="onclickHandler('Culture')">Culture</button>
+            <div id="Culture" class="hide" style="background-color:#c4e9f9; ; margin-top: 30px;" >
+                <blockquote class="blockquote" style="border-left:  solid #0d4056">
+                <p class="pb-2">
+                    {{data.Culture}}
+                </p>
+                </blockquote>
+            </div>
+        </div>
+        <div class="col-sm-3" style="padding:20px">
+            <button style="padding:20px;margin-left: 20px;width:180px" class="btn btn-info btn-lg" type="button" onclick="onclickHandler('Language')">Language</button>
+            <div id="Language" class="hide" style="background-color:#c4e9f9; margin-top: 30px;" >
+                <blockquote class="blockquote" style="border-left:  solid #0d4056;">
+                <p class="pb-2">
+                    {{data.Language}}
+                </p>
+                </blockquote>
+            </div>
+        </div>
+        
+    </div>
+    
+   
+</div>
+<script>
+    function onclickHandler(val){
+
+        console.log(val);
+        
+        var output = document.getElementById(val);
+        output.classList.remove("hide");
+        
+
+        if(val!="Geography"){
+            var output1 = document.getElementById('Geography');
+            output1.classList.add("hide");
+        }
+        if(val!="History"){
+            var output1 = document.getElementById('History');
+            output1.classList.add("hide");
+        }
+        if(val!="Culture"){
+            var output1 = document.getElementById('Culture');
+            output1.classList.add("hide");
+        }
+        if(val!="Language"){
+            var output1 = document.getElementById('Language');
+            output1.classList.add("hide");
+        }
+
+        
+        // var out="<b>${}</b> " ;
+        // var out = `<p style="text-align: end;font-size:12px;font-family:verdana;color:white"><span>  ${data.val}</span></p>`;
+        // output.innerHTML =out;
+        // return 
+        // `<div style="color:red">hello</div>`
+    }
+</script>
+
+
+</body>
+</html>
